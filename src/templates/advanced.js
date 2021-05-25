@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {graphql} from 'gatsby';
 
 import components, {Layout} from '../components/index';
+import './advanced.scss';
 
 // this minimal GraphQL query ensures that when 'gatsby develop' is running,
 // any changes to content files are reflected in browser
@@ -17,7 +18,7 @@ export const query = graphql`
 export default class Advanced extends React.Component {
     render() {
         return (
-            <Layout {...this.props}>
+            <Layout {...this.props}><div className="moo">aaaa</div>
             {(!_.get(this.props, 'pageContext.frontmatter.hide_title', null)) && (
             <header className="section section--header">
               <div className="container container--lg">
